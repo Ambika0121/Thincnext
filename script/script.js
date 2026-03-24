@@ -95,3 +95,35 @@ function updateServiceContent(service) {
 
 // Run the setup when the document is ready
 document.addEventListener('DOMContentLoaded', initializeServiceExplorer);
+
+
+
+// GSAP
+
+const tween1 = gsap.to(".track", {
+  xPercent: -50,
+  duration: 20,
+  ease: "none",
+  repeat: -1,
+});
+
+const track2 = document.querySelector(".track2");
+gsap.set(track2, { xPercent: -50 });
+const tween2 = gsap.to(track2, {
+  xPercent: 0,
+  duration: 20,
+  ease: "none",
+  repeat: -1,
+});
+
+function pauseMarquee(tween) {
+  gsap.to(tween, { timeScale: 0, duration: 0.4, ease: "power2.out" });
+}
+function resumeMarquee(tween) {
+  gsap.to(tween, { timeScale: 1, duration: 0.6, ease: "power2.inOut" });
+}
+document.querySelector(".marquee").addEventListener("mouseenter", () => pauseMarquee(tween1));
+document.querySelector(".marquee").addEventListener("mouseleave", () => resumeMarquee(tween1));
+document.querySelector(".marquee2").addEventListener("mouseenter", () => pauseMarquee(tween2));
+document.querySelector(".marquee2").addEventListener("mouseleave", () => resumeMarquee(tween2));
+
