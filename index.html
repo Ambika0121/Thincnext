@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -8,8 +8,12 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <style type="text/tailwindcss">
         @theme {
@@ -285,9 +289,201 @@
         </div>
     </section>
 
+    <!--Testimonials-->
+    <section class="bg-white mb-20">
+      <p class="text-center text-6xl text-black font-bold pt-10">What people Say</p>
+      <p class="text-center mt-10 text-gray-500">Discover what our satisfied customers have to say</p>
+      <p class="text-center text-gray-500">about their experiences with our product/services.</p>
+    <div class="swiper mySwiper py-20">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide flex justify-center">
+          <div
+            class="border border-yellow-300 rounded-2xl shadow-md p-6 max-w-md w-full bg-blue-100"
+          >
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="flex gap-1 text-yellow-500 mb-4"
+            >
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+            </div>
+
+            <p
+              class="text-gray-700 text-sm leading-relaxed mb-6"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              The yoga studio has helped me find inner peace and improve my
+              physical health. I highly recommend it.
+            </p>
+
+            <div
+              class="flex items-center gap-3"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              <img
+                src="https://i.pravatar.cc/40"
+                alt="user"
+                class="w-10 h-10 rounded-full"
+              />
+              <div>
+                <h4
+                  class="font-semibold text-gray-800 text-sm"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
+                  James Davidson
+                </h4>
+                <p
+                  class="text-xs text-gray-500"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
+                  CEO, TheStudyHub
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide flex justify-center">
+          <div
+            class="border border-yellow-300 rounded-2xl shadow-md p-6 max-w-md w-full bg-blue-500"
+          >
+            <div class="flex gap-1 text-yellow-500 mb-4">
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+            </div>
+
+            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+              The yoga studio has helped me find inner peace and improve my
+              physical health. I highly recommend it.
+            </p>
+
+            <div class="flex items-center gap-3">
+              <img
+                src="https://i.pravatar.cc/40"
+                alt="user"
+                class="w-10 h-10 rounded-full"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-800 text-sm">
+                  James Davidson
+                </h4>
+                <p class="text-xs text-gray-500">CEO, TheStudyHub</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide flex justify-center">
+          <div
+            class="border border-yellow-300 rounded-2xl shadow-md p-6 max-w-md w-full bg-blue-800"
+          >
+            <div class="flex gap-1 text-yellow-500 mb-4">
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+            </div>
+
+            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+              The yoga studio has helped me find inner peace and improve my
+              physical health. I highly recommend it.
+            </p>
+
+            <div class="flex items-center gap-3">
+              <img
+                src="https://i.pravatar.cc/40"
+                alt="user"
+                class="w-10 h-10 rounded-full"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-800 text-sm">
+                  James Davidson
+                </h4>
+                <p class="text-xs text-gray-500">CEO, TheStudyHub</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide"></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    </section>
+
+<footer class="bg-black text-gray-300 px-8 py-12">
+
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Top Section -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      
+
+      <!-- Left Links -->
+      <div class="space-y-3">
+       <div> <a href="#" class="hover:text-blue-300">Home</a></div>
+      <div> <a href="#" class="hover:text-blue-300">About</a></div>
+       <div><a href="#" class="hover:text-blue-300 ">Services</a></div>
+        <div><a href="#" class="hover:text-blue-300 ">Career</a></div>
+        <div><a href="#" class="hover:text-blue-300 ">Contact Us</a></div>
+</div>
+  <!-- Middle Section -->
+   <div class="space-y-3 text-center md:text-left">
+
+    <a href="#" class="block hover:text-blue-300">Terms & Conditions</a>
+    <a href="#" class="block hover:text-blue-300">Policies</a>
+    <a href="#" class="block hover:text-blue-300">Email</a>
+    <a href="#" class="block hover:text-blue-300">Address</a>
+  </div>
+
+      <!-- Right Links -->
+    <div class="space-y-3 mt-6 md:mt-0 text-right">
+      <div><a href="#" class="hover:text-blue-300 transition">Instagram</a></div>
+        <div><a href="#" class="hover:text-blue-300 transition" class="mr-5">Youtube</a></div>
+        <div><a href="#" class="hover:text-blue-300 transition" class="mr-5">LinkedIn</a></div>
+         <div><a href="#" class="hover:text-blue-300 transition" class="ml-5">Facebook</a></div>
+      </div>
+
+    </div>
+
+  <!-- Divider -->
+    <hr class="border-gray-700 my-30">
+
+  
+  </div>
+
+  <!-- Big Background Text -->
+  <div class="relative mt-10 ml-80 mb-[90px]">
+
+    <h1 class="text-[80px] md:text-[140px] font-bold text-white/40 leading-none">
+      THINCNEXT
+    </h1>
+
+    <!-- Center Button -->
 
 
+  </div>
+  <div> <p class="text-gray-500 text-sm ml-175 " >
+      Copyright © 2026
+    </p></div>
+ 
+</footer>
+    
+    
 
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -297,7 +493,10 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
         integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-    <script src="javascript.js"></script>
+    <script src="script/swiper.js"></script>
+    <script src="script/script.js"></script>
+
+    
 
 </body>
 
