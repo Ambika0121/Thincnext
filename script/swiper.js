@@ -1,21 +1,17 @@
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        effect: "fade",
-        speed: 2000,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-        fadeEffect: {
-          crossFade: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    
+var swiper = new Swiper(".testimonial", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".next",
+        prevEl: ".prev",
+      },
+      centeredSlides: true,
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop:true
+    });
