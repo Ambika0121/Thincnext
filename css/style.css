@@ -53,7 +53,7 @@
 }
 
 #buttons-container::-webkit-scrollbar-thumb {
-    background: #2563eb; /* Tailwind blue-600 */
+    background: #598af4; /* Tailwind blue-600 */
     border-radius: 4px;
 }
 
