@@ -1,34 +1,55 @@
+// main.js
+
+window.addEventListener("load", () => {
+    const textTrack = document.querySelector("#smooth-marquee");
+
+    if (textTrack) {
+        // Initialize the GSAP animation
+        const loop = gsap.to(textTrack, {
+            xPercent: -50,   // Move left by exactly half the total width
+            ease: "none",    // Constant speed (no slowing down)
+            duration: 10,    // Time for one full cycle (increase for slower motion)
+            repeat: -1       // Loop forever
+        });
+
+        // Pause when the user hovers over the text
+        textTrack.addEventListener("mouseenter", () => loop.pause());
+        
+        // Resume when the mouse leaves
+        textTrack.addEventListener("mouseleave", () => loop.play());
+    }
+});
 
 const thincnextServices = [
     {
         id: 'startups',
         title: 'Design for Startups',
         description: "We're all about creating long-term relationships. We host and maintain our own solutions & offer on-going analysis & ideas sessions plus design retainers you'd expect to see.",
-        // bgImage: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&q=80&w=1000'
+        bgImage: '/img/startup.jpg'
     },
     {
         id: 'web',
         title: 'Web Technology',
         description: "We develop scalable websites & applications that work. Whether it is powerful content management, e-commerce or a killer app, we have the skills to turn ideas into reality.",
-        // bgImage: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1000'
+        bgImage: '/img/webdev.jpg'
     },
     {
         id: 'apps',
         title: 'Apps Development',
         description: "Our discovery processes are designed to get under the hood of your brand & empathise with your audience. We'll put a winning strategy in place to achieve your objectives.",
-        // bgImage: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000'
+        bgImage: '/img/appdev.jpg'
     },
     {
         id: 'cyber',
         title: 'Cyber Security',
         description: "The digital world has various types of insecurities with the software we use in our daily life. Security is always important to secure data which is linked to our applications.",
-        // bgImage: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000'
+        bgImage: '/img/cybersec.jpg'
     },
     {
         id: 'marketing',
         title: 'Digital Marketing',
         description: "Social media marketing has become one of the greatest sources to brand or market any company. We offer high-quality SEO, PPC campaigns, and holistic branding strategies.",
-        // bgImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000'
+        bgImage: '/img/dm.jpg'
     }
 ];
 
