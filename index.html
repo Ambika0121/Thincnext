@@ -9,7 +9,9 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
 
     <style type="text/tailwindcss">
@@ -163,104 +165,161 @@
     </div>
 </div>
 
-    <section class="">
-        <div>
-            <div>
-                <p>Our Philosophy</p>
+
+    <section class="py-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="py-10">
+                <div data-aos="fade-up" class="text-6xl text-center font-bold py-4">
+                    <p>Our Philosophy</p>
+                </div>
+                <div class="text-md text-justify max-w-4xl mx-auto py-2 text-gray-500">
+                    <p>
+                        Before we get creative or put a digital solution in place, we take the time to fully understand
+                        your brand, project & the people its intended for. We'll make sure focus is directed in the
+                        right areas & ensure a winning strategy, a design that speaks to your audience & code that is
+                        fast, secure & clean. We make the entire process painless for our clients whilst disrupting the
+                        digital norm.
+                    </p>
+                </div>
             </div>
-            <div>
-                <p>Before we get creative or put a digital solution in place, we take the time to fully understand your
-                    brand, project & the people its intended for. We'll make sure focus is directed in the right areas &
-                    ensure a winning strategy, a design that speaks to your audience & code that is fast, secure &
-                    clean. We make the entire process painless for our clients whilst disrupting the digital norm.</p>
+            <div class="flex gap-2 w-full p-2">
+                <div class="relative w-1/3 h-[300px] rounded-2xl border-2 border-gray-300 overflow-hidden group">
+                    <div class="absolute inset-0 bg-[url('/img/discover1.webp')] bg-cover bg-center blur-[2px]"></div>
+                    <div class="absolute inset-0 bg-black/30"></div>
+                    <div class="absolute inset-0 flex justify-center items-center group-hover:hidden">
+                        <div class="text-4xl font-semibold text-white">
+                            <p>Discover</p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute inset-0 flex flex-col justify-between items-center p-4 hidden group-hover:flex">
+                        <div class="w-full flex justify-between">
+                            
+                            <div class="text-4xl text-white font-semibold">
+                                <p>Discover</p>
+                            </div>
+                            <div>
+                                <i data-lucide="microscope"
+                                    class="size-16 p-3 text-blue-500 bg-blue-200 rounded-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="text-justify text-white">
+                            <p>
+                                By carrying out deep analysis & research, we get under the hood of your brand &
+                                empathise to understand truly with audience
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative w-1/3 h-[300px] rounded-2xl border-2 border-gray-300 overflow-hidden group">
+                    <div class="absolute inset-0 bg-[url('/img/plan1.webp')] bg-cover bg-center blur-[2px]"></div>
+                    <div class="absolute inset-0 bg-black/30"></div>
+                    <div class="absolute inset-0 flex justify-center items-center group-hover:hidden">
+                        <div class="text-4xl font-semibold text-white">
+                            <p>Plan</p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute inset-0 flex flex-col justify-between items-center p-4 hidden group-hover:flex">
+                        <div class="w-full flex justify-between">
+                            
+                            <div class="text-4xl text-white font-semibold">
+                                <p>Plan</p>
+                            </div>
+                            <div>
+                                <i data-lucide="chart-gantt"
+                                    class="size-16 p-3 text-blue-500 bg-blue-200 rounded-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="text-justify text-white">
+                            <p>
+                                Collaboratively, we'll put a digital strategy in place along with clear project objectives during discovery sessions & workshops.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative w-1/3 h-[300px] rounded-2xl border-2 border-gray-300 overflow-hidden group">
+                    <div class="absolute inset-0 bg-[url('/img/create1.webp')] bg-cover bg-center blur-[2px]"></div>
+                    <div class="absolute inset-0 bg-black/30"></div>
+                    <div class="absolute inset-0 flex justify-center items-center group-hover:hidden">
+                        <div class="text-4xl font-semibold text-white">
+                            <p>Create</p>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute inset-0 flex flex-col justify-between items-center p-4 hidden group-hover:flex">
+                        <div class="w-full flex justify-between">
+                            
+                            <div class="text-4xl text-white font-semibold">
+                                <p>Create</p>
+                            </div>
+                            <div>
+                                <i data-lucide="layers-plus"
+                                    class="size-16 p-3 text-blue-500 bg-blue-200 rounded-2xl"></i>
+                            </div>
+                        </div>
+                        <div class="text-justify text-white">
+                            <p>
+                                Our design & development teams will bring all ideas to life in browser for an experience your audience will love.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="w-full py-5 flex justify-center items-center"><a href=""
+                    class="px-4 py-1 bg-blue-100 text-center rounded-2xl font-semibold">more...</a></div>
         </div>
-        <div>
-            <div>
-                <div>
-                    <div>
-                        <p>Discover</p>
-                    </div>
-                </div>
-                <div>
-                    <div></div>
-                    <div>
-                        <p>Discover</p>
-                    </div>
-                    <div>
-                        <p>By carrying out deep analysis & research, we get under the hood of your brand & empathise to
-                            understand truly with audience</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div>
-                        <p>Plan</p>
-                    </div>
-                </div>
-                <div>
-                    <div></div>
-                    <div>
-                        <p>Plan</p>
-                    </div>
-                    <div>
-                        <p>Collaboratively, we'll put a digital strategy in place along with clear project objectives
-                            during discovery sessions & workshops.</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div>
-                        <p>Create</p>
-                    </div>
-                </div>
-                <div>
-                    <div></div>
-                    <div>
-                        <p>Create</p>
-                    </div>
-                    <div>
-                        <p>Our design & development teams will bring all ideas to life in browser for an experience your
-                            audience will love.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div><a href="">more</a></div>
+
     </section>
 
-    <section>
-        <div>
-            <p>Our Strength</p>
-        </div>
-        <div>
-            <p>We hold major strength in</p>
-        </div>
-        <div>
-            <div>
-                <p>Creative Design</p>
+    <section class="py-15">
+        <div class="max-w-7xl mx-auto">
+            <div class="py-10">
+                <div class="text-4xl text-center font-bold py-2">
+                    <p>Our Strength</p>
+                </div>
+                <div class="flex justify-center text-m max-w-4xl mx-auto py-2">
+                    <p>We hold major strength in</p>
+                </div>
             </div>
-            <div>
-                <p>Retina Ready</p>
-            </div>
-            <div>
-                <p>Solution Oriented</p>
-            </div>
-            <div>
-                <p>Easy to Use</p>
-            </div>
-            <div>
-                <p>Budget Friendly</p>
+            <div class="flex justify-center gap-3">
+                <div class="flex flex-col gap-4">
+                    <div
+                        class="px-4 py-2 w-[300px] text-center rounded-sm border-2 border-gray-300 text-xl font-semibold">
+                        <p>Creative Design</p>
+                    </div>
+                    <div class="px-4 py-2 w-[300px] h-12"></div>
+                    <div
+                        class="px-4 py-2 w-[300px] text-center rounded-sm border-2 border-gray-300 text-xl font-semibold">
+                        <p>Solution Oriented</p>
+                    </div>
+                    <div class="px-4 py-2 w-[300px] h-12"></div>
+                    <div
+                        class="px-4 py-2 w-[300px] text-center rounded-sm border-2 border-gray-300 text-xl font-semibold">
+                        <p>Budget Friendly</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="px-4 py-2 w-[300px] h-12"></div>
+                    <div
+                        class="px-4 py-2 w-[300px] text-center rounded-sm border-2 border-gray-300 text-xl font-semibold">
+                        <p>Retina Ready</p>
+                    </div>
+                    <div class="px-4 py-2 w-[300px] h-12"></div>
+                    <div
+                        class="px-4 py-2 w-[300px] text-center rounded-sm border-2 border-gray-300 text-xl font-semibold">
+                        <p>Easy to Use</p>
+                    </div>
+                    <div class="px-4 py-2 w-[300px] h-12"></div>
+                </div>
             </div>
         </div>
     </section>
 
 
 
-    <section class="w-full max-w-6xl mx-auto">
+    <section class="w-full max-w-6xl mx-auto pt-25">
         <h2 class="text-4xl font-bold text-blue-600 mb-8 border-b-2 border-blue-100 pb-4">Service Explorer</h2>
 
         <div class="flex flex-col md:flex-row gap-6 h-auto md:h-[500px]">
@@ -273,7 +332,11 @@
                 <div id="service-bg"
                     class="absolute inset-0 bg-cover bg-center transition-all duration-500 ease-in-out"></div>
 
-                <div class="absolute inset-0 bg-blue-900/85 transition-colors duration-500"></div>
+            <div class="w-full md:w-2/3 relative rounded-2xl overflow-hidden shadow-xl border border-blue-100 group flex-shrink-0">
+                
+                <div id="service-bg" class="absolute inset-0 bg-cover bg-center transition-all duration-500 ease-in-out"></div>
+                
+                <div class="absolute inset-0 bg-blue-600/60 transition-colors duration-500"></div>
 
                 <div class="relative z-10 p-10 h-full flex flex-col justify-center">
                     <h3 id="service-title" class="text-3xl font-bold text-white mb-4 transition-all duration-300">Select
@@ -289,170 +352,626 @@
         </div>
     </section>
 
-    <!--Testimonials-->
-    <section class="bg-white mb-20">
-        <p class="text-center text-6xl text-black font-bold pt-10">What people Say</p>
-        <p class="text-center mt-10 text-gray-500">Discover what our satisfied customers have to say</p>
-        <p class="text-center text-gray-500">about their experiences with our product/services.</p>
-        <div class="swiper mySwiper py-20">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide flex justify-center">
-                    <div class="border border-yellow-300 rounded-2xl shadow-md p-6 max-w-md w-full bg-blue-100">
-                        <div data-aos="fade-up" data-aos-duration="2000" class="flex gap-1 text-yellow-500 mb-4">
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                        </div>
+    <!--Clients-->
 
-                        <p class="text-gray-700 text-sm leading-relaxed mb-6" data-aos="fade-up"
-                            data-aos-duration="2000">
-                            The yoga studio has helped me find inner peace and improve my
-                            physical health. I highly recommend it.
-                        </p>
+    <section class="mt-20">
+      <P class="text-center font-bold text-6xl pb-10" data-aos="fade-up"  data-aos-duration="1500">Our Clients</P>
+      <div class="relative overflow-hidden space-y-8 py-10">
+      <div
+        class="pointer-events-none absolute left-0 top-0 h-full w-32 bg-gradient-to-r from-white to-transparent z-10"
+      ></div>
+      <div
+        class="pointer-events-none absolute right-0 top-0 h-full w-32 bg-gradient-to-l from-white to-transparent z-10"
+      ></div>
 
-                        <div class="flex items-center gap-3" data-aos="fade-up" data-aos-duration="2000">
-                            <img src="https://i.pravatar.cc/40" alt="user" class="w-10 h-10 rounded-full" />
-                            <div>
-                                <h4 class="font-semibold text-gray-800 text-sm" data-aos="fade-up"
-                                    data-aos-duration="2000">
-                                    James Davidson
-                                </h4>
-                                <p class="text-xs text-gray-500" data-aos="fade-up" data-aos-duration="2000">
-                                    CEO, TheStudyHub
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide flex justify-center">
-                    <div class="border border-yellow-300 rounded-2xl shadow-md p-6 max-w-md w-full bg-blue-500">
-                        <div class="flex gap-1 text-yellow-500 mb-4">
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                        </div>
-
-                        <p class="text-gray-700 text-sm leading-relaxed mb-6">
-                            The yoga studio has helped me find inner peace and improve my
-                            physical health. I highly recommend it.
-                        </p>
-
-                        <div class="flex items-center gap-3">
-                            <img src="https://i.pravatar.cc/40" alt="user" class="w-10 h-10 rounded-full" />
-                            <div>
-                                <h4 class="font-semibold text-gray-800 text-sm">
-                                    James Davidson
-                                </h4>
-                                <p class="text-xs text-gray-500">CEO, TheStudyHub</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide flex justify-center">
-                    <div class="border border-yellow-300 rounded-2xl shadow-md p-6 max-w-md w-full bg-blue-800">
-                        <div class="flex gap-1 text-yellow-500 mb-4">
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                            <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
-                        </div>
-
-                        <p class="text-gray-700 text-sm leading-relaxed mb-6">
-                            The yoga studio has helped me find inner peace and improve my
-                            physical health. I highly recommend it.
-                        </p>
-
-                        <div class="flex items-center gap-3">
-                            <img src="https://i.pravatar.cc/40" alt="user" class="w-10 h-10 rounded-full" />
-                            <div>
-                                <h4 class="font-semibold text-gray-800 text-sm">
-                                    James Davidson
-                                </h4>
-                                <p class="text-xs text-gray-500">CEO, TheStudyHub</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide"></div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+      <!-- ROW 1 -->
+      <div class="marquee overflow-hidden">
+      <div class="track flex w-max">
+        <!--Original-->
+      <div class="flex">
+            <img
+              src="./img/clients/1.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 opacity-70 hover:grayscale-0 hover:opacity-100  hover:scale-110"
+            />
+            <img
+              src="./img/clients/2.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110"
+            />
+            <img
+              src="./img/clients/3.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110"
+            />
+            <img
+              src="./img/clients/4.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110"
+            />
+            <img
+              src="./img/clients/5.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/6.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/7.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/8.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/9.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/10.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/11.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/12.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/13.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/14.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+          </div>
+          <!--Duplicate-->
+          <div class="flex">
+            <img
+              src="./img/clients/1.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/2.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/3.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/4.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/5.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/6.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/7.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/8.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/9.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/10.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/11.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+            <img
+              src="./img/clients/12.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0"
+            />
+            <img
+              src="./img/clients/13.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0"
+            />
+            <img
+              src="./img/clients/14.png"
+              class="mx-4 w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0  hover:scale-110"
+            />
+          </div>
         </div>
+      </div> 
+
+      <!--Row2-->
+      <div class="marquee2 overflow-hidden pt-20">
+        <div class="track2 flex w-max"> 
+          <!-- Original -->
+          <div class="flex items-center gap-8 mr-5">
+            <img
+              src="./img/clients/15.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/16.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/17.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/18.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/19.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/20.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/21.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/22.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/23.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/24.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/25.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/26.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/27.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/28.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+          </div>
+          <!--Duplicate-->
+          <div class="flex items-center gap-8">
+            <img
+              src="./img/clients/15.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/16.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/17.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/18.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/19.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/20.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/21.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/22.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/23.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/24.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/25.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/26.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/27.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+            <img
+              src="./img/clients/28.png"
+              class="w-20 md:w-24 lg:w-28 h-20 md:h-24 lg:h-28 object-contain flex-shrink-0 hover:scale-110"
+            />
+          </div>
+        </div>
+      </div>
+    </div> 
+
+
     </section>
 
-    <footer class="bg-black text-gray-300 px-8 py-12">
+    <!--Testimonials-->
+    <section class="bg-white mb-20">
 
-        <div class="max-w-7xl mx-auto">
+      <p class="text-center text-6xl text-black font-bold pt-20" data-aos="fade-up"  data-aos-duration="1500">What People Say About Us</p>
+      <p class="text-center mt-10 text-gray-500 font-semibold" data-aos="fade-up"  data-aos-duration="1500">Discover what our satisfied customers have to say</p>
+      <p class="text-center text-gray-500 pb-10 font-semibold" data-aos="fade-up"  data-aos-duration="1500">about their experiences with our product/services.</p>
 
-            <!-- Top Section -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <!--Swiper-->
+    <div class="swiper testimonial py-20"  data-aos="fade-up"  data-aos-duration="1500">
+      <div class="swiper-wrapper pb-10 ">
+         <div class="swiper-slide">
+          <div
+            class="border border-gray-300 hover:border-gray-400 shadow-xl rounded-2xl shadow-md p-6 max-w-xl w-full bg-white"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+          >
+            <div
+              class="flex gap-1 text-yellow-500 mb-4"
+            >
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+            </div>
+
+            <p
+              class="text-gray-700 text-sm leading-relaxed font-semibold mb-6"
+            >
+              The yoga studio has helped me find inner peace and improve my
+              physical health. I highly recommend it.
+            </p>
+
+            <div
+              class="flex items-center gap-3"
+            >
+              <img
+                src="https://i.pravatar.cc/40"
+                alt="user"
+                class="w-10 h-10 rounded-full"
+              />
+              <div>
+                <h4
+                  class="font-semibold text-gray-800 text-sm" 
+                >
+                  James Davidson
+                </h4>
+                <p class="text-xs text-gray-500">
+                  CEO, TheStudyHub
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div
+            class="border border-gray-300 hover:border-gray-400 shadow-xl rounded-2xl shadow-md p-6 max-w-xl w-full bg-white"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+          >
+            <div
+              class="flex gap-1 text-yellow-500 mb-4"
+            >
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+            </div>
+
+            <p
+              class="text-gray-700 text-sm leading-relaxed font-semibold mb-6"
+            >
+              The yoga studio has helped me find inner peace and improve my
+              physical health. I highly recommend it.
+            </p>
+
+            <div
+              class="flex items-center gap-3"
+            >
+              <img
+                src="https://i.pravatar.cc/40"
+                alt="user"
+                class="w-10 h-10 rounded-full"
+              />
+              <div>
+                <h4
+                  class="font-semibold text-gray-800 text-sm" 
+                >
+                  James Davidson
+                </h4>
+                <p class="text-xs text-gray-500">
+                  CEO, TheStudyHub
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div
+            class="border border-gray-300 shadow-xl hover:border-gray-400 rounded-2xl shadow-md p-6 max-w-xl w-full bg-white"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+          >
+            <div
+              class="flex gap-1 text-yellow-500 mb-4"
+            >
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+            </div>
+
+            <p
+              class="text-gray-700 text-sm leading-relaxed font-semibold mb-6"
+            >
+              The yoga studio has helped me find inner peace and improve my
+              physical health. I highly recommend it.
+            </p>
+
+            <div
+              class="flex items-center gap-3"
+            >
+              <img
+                src="https://i.pravatar.cc/40"
+                alt="user"
+                class="w-10 h-10 rounded-full"
+              />
+              <div>
+                <h4
+                  class="font-semibold text-gray-800 text-sm" 
+                >
+                  James Davidson
+                </h4>
+                <p class="text-xs text-gray-500">
+                  CEO, TheStudyHub
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <div class="swiper-slide">
+          <div
+            class="border border-gray-300 shadow-xl hover:border-gray-400 rounded-2xl shadow-md p-6 max-w-xl w-full bg-white"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+          >
+            <div
+              class="flex gap-1 text-yellow-500 mb-4"
+            >
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+            </div>
+
+            <p
+              class="text-gray-700 text-sm leading-relaxed font-semibold mb-6"
+            >
+              The yoga studio has helped me find inner peace and improve my
+              physical health. I highly recommend it.
+            </p>
+
+            <div
+              class="flex items-center gap-3"
+            >
+              <img
+                src="https://i.pravatar.cc/40"
+                alt="user"
+                class="w-10 h-10 rounded-full"
+              />
+              <div>
+                <h4
+                  class="font-semibold text-gray-800 text-sm" 
+                >
+                  James Davidson
+                </h4>
+                <p class="text-xs text-gray-500">
+                  CEO, TheStudyHub
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <div class="swiper-slide">
+          <div
+            class="border border-gray-300 shadow-xl rounded-2xl hover:border-gray-400 shadow-md p-6 max-w-xl w-full bg-white"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+          >
+            <div
+              class="flex gap-1 text-yellow-500 mb-4"
+            >
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+            </div>
+
+            <p class="text-gray-700 text-sm leading-relaxed mb-6">
+              The yoga studio has helped me find inner peace and improve my
+              physical health. I highly recommend it.
+            </p>
+
+            <div
+              class="flex items-center gap-3"
+            >
+              <img
+                src="https://i.pravatar.cc/40"
+                alt="user"
+                class="w-10 h-10 rounded-full"
+              />
+              <div>
+                <h4
+                  class="font-semibold text-gray-800 text-sm" 
+                >
+                  James Davidson
+                </h4>
+                <p class="text-xs text-gray-500">
+                  CEO, TheStudyHub
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       <div class="swiper-slide">
+          <div
+            class="border border-gray-300 shadow-xl rounded-2xl hover:border-gray-400 shadow-md p-6 max-w-xl w-full bg-white"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+          >
+            <div
+              class="flex gap-1 text-yellow-500 mb-4"
+            >
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+              <i data-lucide="star" class="w-5 h-5 fill-yellow-500"></i>
+            </div>
+
+            <p
+              class="text-gray-700 text-sm leading-relaxed font-semibold mb-6"
+            >
+              The yoga studio has helped me find inner peace and improve my
+              physical health. I highly recommend it.
+            </p>
+
+            <div
+              class="flex items-center gap-3"
+            >
+              <img
+                src="https://i.pravatar.cc/40"
+                alt="user"
+                class="w-10 h-10 rounded-full"
+              />
+              <div>
+                <h4
+                  class="font-semibold text-gray-800 text-sm" 
+                >
+                  James Davidson
+                </h4>
+                <p class="text-xs text-gray-500">
+                  CEO, TheStudyHub
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    
+
+    
+    </section>
 
 
-                <!-- Left Links -->
-                <div class="space-y-3">
-                    <div> <a href="#" class="hover:text-blue-300">Home</a></div>
-                    <div> <a href="#" class="hover:text-blue-300">About</a></div>
-                    <div><a href="#" class="hover:text-blue-300 ">Services</a></div>
-                    <div><a href="#" class="hover:text-blue-300 ">Career</a></div>
-                    <div><a href="#" class="hover:text-blue-300 ">Contact Us</a></div>
-                </div>
-                <!-- Middle Section -->
-                <div class="space-y-3 text-center md:text-left">
 
-                    <a href="#" class="block hover:text-blue-300">Terms & Conditions</a>
-                    <a href="#" class="block hover:text-blue-300">Policies</a>
-                    <a href="#" class="block hover:text-blue-300">Email</a>
-                    <a href="#" class="block hover:text-blue-300">Address</a>
-                </div>
+     <!--footer-->
+    
 
-                <!-- Right Links -->
-                <div class="space-y-3 mt-6 md:mt-0 text-right">
-                    <div><a href="#" class="hover:text-blue-300 transition">Instagram</a></div>
-                    <div><a href="#" class="hover:text-blue-300 transition" class="mr-5">Youtube</a></div>
-                    <div><a href="#" class="hover:text-blue-300 transition" class="mr-5">LinkedIn</a></div>
-                    <div><a href="#" class="hover:text-blue-300 transition" class="ml-5">Facebook</a></div>
-                </div>
+<footer class="bg-gray-100 text-gray-1000 px-8 py-16 border-t border-gray-200">
+
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-sm">
+      <div>
+        <h3 class="text-gray-900 font-semibold mb-4">Company</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-blue-600 hover:translate-x-1 transition duration-300">Home</a></li>
+          <li><a href="#" class="hover:text-blue-600 hover:translate-x-1 transition duration-300">About</a></li>
+          <li><a href="#" class="hover:text-blue-600 hover:translate-x-1 transition duration-300">Services</a></li>
+          <li><a href="#" class="hover:text-blue-600 hover:translate-x-1 transition duration-300">Career</a></li>
+          <li><a href="#" class="hover:text-blue-600 hover:translate-x-1 transition duration-300">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="text-left md:text-center">
+        <h3 class="text-gray-900 font-semibold mb-4">Support</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-blue-600 transition">Terms & Conditions</a></li>
+          <li><a href="#" class="hover:text-blue-600 transition">Policies</a></li>
+          <li><a href="#" class="hover:text-blue-600 transition">Email</a></li>
+          <li><a href="#" class="hover:text-blue-600 transition">Address</a></li>
+        </ul>
+      </div>
+
+      <div class="text-left md:text-right">
+        <h3 class="text-gray-900 font-semibold mb-4">Follow Us</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-blue-600 transition">Instagram</a></li>
+          <li><a href="#" class="hover:text-blue-600 transition">YouTube</a></li>
+          <li><a href="#" class="hover:text-blue-600 transition">LinkedIn</a></li>
+          <li><a href="#" class="hover:text-blue-600 transition">Facebook</a></li>
+        </ul>
+      </div>
 
             </div>
 
-            <!-- Divider -->
-            <hr class="border-gray-700 my-30">
+    <div class="my-12 h-[2px] bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
 
+    <div class="text-center">
 
-        </div>
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-widest 
+      bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-700 
+      bg-clip-text text-transparent
+      animate-pulse hover:scale-110 transition duration-300 drop-shadow-md">
+        THINCNEXT
+      </h1>
 
-        <!-- Big Background Text -->
-        <div class="relative mt-10 ml-80 mb-[90px]">
+      <p class="text-gray-500 text-sm mt-4 hover:text-blue-600 transition">
+        © 2026 THINCNEXT. All rights reserved.
+      </p>
 
-            <h1 class="text-[80px] md:text-[140px] font-bold text-white/40 leading-none">
-                THINCNEXT
-            </h1>
+    </div>
 
-            <!-- Center Button -->
-
-
-        </div>
-        <div>
-            <p class="text-gray-500 text-sm ml-175 ">
-                Copyright © 2026
-            </p>
-        </div>
-
-    </footer>
-
-
+  </div>
+</footer>
+    
+    
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/bundled/locomotive-scroll.min.js"></script>
     <script>
+        const locomotiveScroll = new LocomotiveScroll();
         lucide.createIcons();
         AOS.init();
     </script>
