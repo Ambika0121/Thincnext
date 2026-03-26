@@ -1,0 +1,102 @@
+:root {
+    --blue: #1a73e8;
+    --grey: #e8eaed;
+}
+
+body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 40px; }
+
+.header-container { text-align: center; margin-bottom: 60px; }
+.header-container h1 { font-size: 42px; font-weight: 300; margin: 0; }
+
+.workspace-grid {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 80px;
+    align-items: center;
+}
+
+/* IMAGE STYLING */
+.image-side { flex: 1.2; }
+.img-wrapper {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.img-wrapper img { width: 100%; display: block; transition: opacity 0.4s; }
+
+.read-more-overlay {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: var(--blue);
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 4-PART LOADING LINE STYLING */
+.content-side { flex: 1; }
+
+.feature-item {
+    position: relative;
+    padding: 10px 0 20px 35px;
+    margin-bottom: 15px; /* THE GAP BETWEEN THE 4 LINES */
+    cursor: pointer;
+}
+
+/* The Grey Background (Part of the 4 lines) */
+.feature-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--grey);
+    border-radius: 4px;
+}
+
+/* The Blue Progress (Part of the 4 lines) */
+.feature-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 0%;
+    background: var(--blue);
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.feature-item.active::after {
+    animation: fillLine 5s linear forwards;
+}
+
+@keyframes fillLine {
+    from { height: 0%; }
+    to { height: 100%; }
+}
+
+/* TEXT VISIBILITY */
+.feature-item h3 { margin: 0; color: #5f6368; font-size: 18px; transition: 0.3s; }
+.feature-item.active h3 { color: black; font-weight: 700; }
+
+.feature-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.feature-item.active .feature-details {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.blue-link { color: var(--blue); text-decoration: none; font-weight: 600; }
