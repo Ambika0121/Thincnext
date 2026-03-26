@@ -1,13 +1,220 @@
-<!DOCTYPE html>
+  <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThincNext V2</title>
+    <title>ThincNext | Home</title>
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style type="text/tailwindcss">
+        @theme {
+            --color-brand-blue: #1c8cc1;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-slide-up {
+            opacity: 0;
+            animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .delay-100 { animation-delay: 100ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-500 { animation-delay: 500ms; }
+
+        /* strength */
+         /* 1. Set the fixed height for each word */
+  .strength-card {
+    @apply text-4xl md:text-6xl font-black text-slate-900 tracking-tight flex items-center;
+    height: 90px; 
+  }
+
+  /* 2. The Logic: 
+     0-15%: Stay at word 1
+     15-20%: Move to word 2
+     20-35%: Stay at word 2... and so on.
+  */
+  @keyframes step-slide {
+    0%, 15%   { transform: translateY(0); }
+    20%, 35%  { transform: translateY(-90px); }
+    40%, 55%  { transform: translateY(-180px); }
+    60%, 75%  { transform: translateY(-270px); }
+    80%, 95%  { transform: translateY(-360px); }
+    100%      { transform: translateY(-450px); }
+  }
+
+  .animate-step-slide {
+    /* 12 seconds total: roughly 2 seconds per word including transition */
+    animation: step-slide 12s infinite cubic-bezier(0.85, 0, 0.15, 1);
+  }
+    </style>
 </head>
 <body>
 
+    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brand-blue/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+    <div class="absolute top-[20%] right-[-5%] w-72 h-72 bg-purple-300/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl flex justify-between items-center px-6 z-20 rounded-full 
+                bg-white/20 backdrop-blur-xl border border-white/60 
+                shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_2px_4px_rgba(255,255,255,0.8),inset_0_10px_20px_rgba(255,255,255,0.4),inset_0_-10px_20px_rgba(0,0,0,0.05)]
+                transition-all duration-300 hover:bg-white/30">
+        <div class="flex-shrink-0">
+            <img src="/img/thincnextlogo.png" alt="ThincNext Logo" class="h-20 w-40 drop-shadow-sm">
+        </div>
+        <ul class="hidden md:flex gap-8 list-none m-0 p-0">
+            <li><a href="#home" class="text-gray-800 font-semibold hover:text-brand-blue transition-colors duration-300 drop-shadow-sm">Home</a></li>
+            <li><a href="#about" class="text-gray-800 font-semibold hover:text-brand-blue transition-colors duration-300 drop-shadow-sm">About</a></li>
+            <li><a href="#services" class="text-gray-800 font-semibold hover:text-brand-blue transition-colors duration-300 drop-shadow-sm">Services</a></li>
+            <li><a href="#career" class="text-gray-800 font-semibold hover:text-brand-blue transition-colors duration-300 drop-shadow-sm">Career</a></li>
+            <li><a href="#contact" class="text-gray-800 font-semibold hover:text-brand-blue transition-colors duration-300 drop-shadow-sm">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="h-screen flex items-center px-8 lg:px-24 relative z-10">
+        <div class="max-w-3xl bg-blue-200 text-left">
+            <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6 animate-slide-up delay-100 text-gray-900 drop-shadow-sm">
+                Empowering the <span class="text-brand-blue">Next</span> Generation of Tech.
+            </h1>
+            <p class="text-lg lg:text-xl text-gray-700 mb-10 max-w-2xl animate-slide-up delay-300 drop-shadow-sm">
+                We build scalable, innovative solutions designed to transform your ideas into reality.
+            </p>
+            
+            <div class="animate-slide-up delay-500">
+                <a href="#about" class="inline-block px-10 py-4 rounded-full text-lg font-bold text-gray-800 
+                    bg-white/30 backdrop-blur-md border border-white/60
+                    shadow-[0_10px_30px_rgba(0,0,0,0.1),inset_0_2px_4px_rgba(255,255,255,0.9),inset_0_12px_24px_rgba(255,255,255,0.5),inset_0_-12px_24px_rgba(0,0,0,0.05)]
+                    hover:bg-white/40 hover:-translate-y-1 
+                    hover:shadow-[0_15px_35px_rgba(0,0,0,0.15),inset_0_2px_4px_rgba(255,255,255,1),inset_0_12px_24px_rgba(255,255,255,0.6),inset_0_-12px_24px_rgba(0,0,0,0.05)]
+                    transition-all duration-300">
+                    Discover How
+                </a>
+            </div>
+        </div>
+    </section>
+ <section class="max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16">
+    
+    <div class="lg:sticky lg:top-32 h-fit flex flex-col items-start text-left space-y-8">
+      <div class="space-y-4">
+        <h2 class="text-5xl font-black tracking-tight uppercase leading-none">
+          Our <br/> <span class="text-blue-600">Philosophy</span>
+        </h2>
+        <div class="h-1.5 w-20 bg-blue-600"></div>
+      </div>
+      
+      <p class="text-gray-500 text-lg leading-relaxed max-w-md">
+        Before we get creative or put a digital solution in place, we take the time to fully understand your brand, 
+        project & the people its intended for. We’ll make sure focus is directed in the right areas & ensure a winning strategy,
+        a design that speaks to your audience & code that is fast, secure & clean. We make the entire process painless for 
+        our clients whilst disrupting the digital norm.
+      </p>
+
+      <button class="group flex items-center gap-3 font-bold uppercase tracking-widest text-sm hover:text-blue-600 transition-colors">
+        Learn More 
+        <span class="group-hover:translate-x-2 transition-transform">→</span>
+      </button>
+    </div>
+
+    <div class="space-y-12 pb-60">
+      
+      <div class="sticky top-24 bg-[#bae6fd] rounded-[40px] p-10 min-h-[420px] shadow-xl border border-blue-200 flex flex-col justify-between group transition-all duration-500">
+        <div>
+          <div class="flex justify-between items-start">
+            <div class="bg-white/80 p-4 rounded-2xl shadow-sm">
+              <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path></svg>
+            </div>
+            <span class="text-6xl font-black text-blue-900/20">01</span>
+          </div>
+          <h3 class="text-2xl font-bold uppercase mt-8 mb-4 tracking-wider text-blue-900">Discover</h3>
+          <p class="text-blue-900/80 text-base leading-relaxed font-medium">
+            By carrying out deep analysis & research, we get under the hood of your brand & empathise to understand truly with audience.
+          </p>
+        </div>
+        <a href="#" class="text-xs font-bold uppercase tracking-widest text-blue-800 underline underline-offset-8 decoration-2">Approach Details</a>
+      </div>
+
+      <div class="sticky top-32 bg-[#7dd3fc] rounded-[40px] p-10 min-h-[420px] shadow-xl border border-blue-300 flex flex-col justify-between group transition-all duration-500">
+        <div>
+          <div class="flex justify-between items-start">
+            <div class="bg-white/80 p-4 rounded-2xl shadow-sm">
+              <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.375M9 18h3.375m2.25-13.5h1.125a2.25 2.25 0 012.25 2.25v13.5a2.25 2.25 0 01-2.25 2.25H6.75a2.25 2.25 0 01-2.25-2.25V6.75a2.25 2.25 0 012.25-2.25h1.125m.75 0h7.5m-7.5 0v-1.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125V3.75m-7.5 0c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v1.125"></path></svg>
+            </div>
+            <span class="text-6xl font-black text-blue-900/20">02</span>
+          </div>
+          <h3 class="text-2xl font-bold uppercase mt-8 mb-4 tracking-wider text-blue-900">Plan</h3>
+          <p class="text-blue-900/80 text-base leading-relaxed font-medium">
+            Collaboratively, we’ll put a digital strategy in place along with clear project objectives during discovery sessions & workshops.
+          </p>
+        </div>
+        <a href="#" class="text-xs font-bold uppercase tracking-widest text-blue-800 underline underline-offset-8 decoration-2">Approach Details</a>
+      </div>
+
+      <div class="sticky top-40 bg-[#38bdf8] rounded-[40px] p-10 min-h-[420px] shadow-xl border border-blue-400 flex flex-col justify-between group transition-all duration-500">
+        <div>
+          <div class="flex justify-between items-start">
+            <div class="bg-white/80 p-4 rounded-2xl shadow-sm">
+              <svg class="w-8 h-8 text-blue-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a6.01 6.01 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"></path></svg>
+            </div>
+            <span class="text-6xl font-black text-blue-900/20">03</span>
+          </div>
+          <h3 class="text-2xl font-bold uppercase mt-8 mb-4 tracking-wider text-blue-900">Create</h3>
+          <p class="text-blue-900/80 text-base leading-relaxed font-semibold">
+            Our design & development teams will bring all ideas to life in browser for an experience your audience will love.
+          </p>
+        </div>
+        <a href="#" class="text-xs font-bold uppercase tracking-widest text-blue-800 underline underline-offset-8 decoration-2">Approach Details</a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section class="max-w-7xl mx-auto px-6 py-24 flex flex-col lg:flex-row items-center gap-10 overflow-hidden bg-white">
+  
+  <div class="w-full lg:w-1/2 space-y-12">
+    <div class="space-y-4">
+      <span class="text-blue-600 font-bold uppercase tracking-widest text-xs block">Our Expertise</span>
+      <h2 class="text-5xl md:text-7xl font-light text-slate-400 leading-tight">
+        Our <span class="font-black text-slate-900 uppercase tracking-tighter">Strength</span>
+      </h2>
+    </div>
+
+    <div class="relative h-[90px] overflow-hidden flex items-center border-l-4 border-blue-600 pl-8">
+      <div class="animate-step-slide flex flex-col">
+        <h3 class="strength-card">Creative Design</h3>
+        <h3 class="strength-card">Retina Ready</h3>
+        <h3 class="strength-card">Solution Oriented</h3>
+        <h3 class="strength-card">Easy To Use</h3>
+        <h3 class="strength-card">Budget Friendly</h3>
+        <h3 class="strength-card">Creative Design</h3>
+      </div>
+    </div>
+    
+    <p class="text-slate-900 text-xl max-w-md">
+      We deliver digital excellence by focusing on core capabilities.
+    </p>
+  </div>
+
+  <div class="w-full lg:w-1/2 relative flex justify-center lg:justify-end">
+    <div class="relative z-10 p-4 bg-white shadow-2xl rounded-[60px] border border-slate-100 rotate-3 hover:rotate-0 transition-all duration-800">
+      <img 
+        src="strenght.jpg" 
+        alt="Our Team" 
+        class="w-full max-w-[450px] h-[500px] rounded-[50px] object-cover"
+      >
+    </div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-50 rounded-full blur-[100px] -z-10"></div>
+  </div>
+
+</section>
+    
     <section class="services-section">
         <div class="header-container">
             <h1>Services Expertise In.</h1>
@@ -146,5 +353,11 @@
       lucide.createIcons();
     </script>
     <script src="script.js"></script>
+
+    <script>
+      lucide.createIcons();
+    </script>
+
+
 </body>
 </html>
