@@ -56,6 +56,15 @@
     background: #598af4; /* Tailwind blue-600 */
     border-radius: 4px;
 }
+/* new service */
+#nav-container {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+#nav-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+/*  */
 
 /* Simple fade animations for smooth text swapping */
 .fade-out {

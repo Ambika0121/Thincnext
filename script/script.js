@@ -1,100 +1,129 @@
+// Register GSAP ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
-const thincnextServices = [
+const services = [
     {
-        id: 'startups',
-        title: 'Design for Startups',
-        description: "We're all about creating long-term relationships. We host and maintain our own solutions & offer on-going analysis & ideas sessions plus design retainers you'd expect to see.",
-        bgImage: '/img/startup.jpg'
-    },
-    {
-        id: 'web',
-        title: 'Web Technology',
-        description: "We develop scalable websites & applications that work. Whether it is powerful content management, e-commerce or a killer app, we have the skills to turn ideas into reality.",
-        bgImage: '/img/webdev.jpg'
-    },
-    {
-        id: 'apps',
-        title: 'Apps Development',
-        description: "Our discovery processes are designed to get under the hood of your brand & empathise with your audience. We'll put a winning strategy in place to achieve your objectives.",
-        bgImage: '/img/appdev.jpg'
-    },
-    {
-        id: 'cyber',
         title: 'Cyber Security',
-        description: "The digital world has various types of insecurities with the software we use in our daily life. Security is always important to secure data which is linked to our applications.",
+        description: "The digital world has various types of insecurities. Security is paramount to protect the data linked to our daily applications and infrastructure.",
         bgImage: '/img/cybersec.jpg'
     },
     {
-        id: 'marketing',
+        title: 'Web Technology',
+        description: "We develop scalable websites & applications that work. Whether it is powerful content management, e-commerce or a killer app.",
+        bgImage: '/img/webdev.jpg'
+    },
+    {
+        title: 'Design for Startups',
+        description: "We host and maintain our own solutions & offer on-going analysis & ideas sessions plus design retainers to accelerate your growth.",
+        bgImage: '/img/startup.jpg'
+    },
+    {
+        title: 'Apps Development',
+        description: "Our discovery processes are designed to get under the hood of your brand & empathise with your audience to build winning mobile solutions.",
+        bgImage: '/img/appdev.jpg'
+    },
+    {
         title: 'Digital Marketing',
-        description: "Social media marketing has become one of the greatest sources to brand or market any company. We offer high-quality SEO, PPC campaigns, and holistic branding strategies.",
+        description: "Social media marketing has become the greatest source to brand. We offer high-quality SEO, PPC campaigns, and holistic branding strategies.",
         bgImage: '/img/dm.jpg'
     }
 ];
 
 const buttonsContainer = document.getElementById('buttons-container');
+const activeIndicator = document.getElementById('active-indicator');
 const serviceTitle = document.getElementById('service-title');
 const serviceDesc = document.getElementById('service-desc');
 const serviceBg = document.getElementById('service-bg');
 
+let activeIndex = 0;
 
-function initializeServiceExplorer() {
-    thincnextServices.forEach((service, index) => {
-        // Create button element
+function initServices() {
+    services.forEach((service, index) => {
         const btn = document.createElement('button');
-        
-    
-        btn.className = `text-left px-6 py-4 rounded-xl font-semibold transition-all duration-300 border-2 
-                         ${index === 0 ? 'bg-blue-600 text-white border-blue-600 shadow-md' : 'bg-white text-blue-600 border-blue-200 hover:border-blue-600 hover:bg-blue-50'}`;
+        // Modern minimalist button styling
+        btn.className = `text-left px-6 py-4 rounded-xl transition-all duration-300 font-medium text-lg relative
+                         ${index === 0 ? 'text-brand-base bg-brand-light/10 font-semibold' : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'}`;
         btn.textContent = service.title;
         
-        // Setup click listener
         btn.addEventListener('click', () => {
-            updateActiveButton(btn);
-            updateServiceContent(service);
+            if (activeIndex === index) return; // Don't animate if already active
+            activeIndex = index;
+            updateUI(btn, service);
         });
 
         buttonsContainer.appendChild(btn);
     });
 
-    // Automatically load the first service into the display area
-    updateServiceContent(thincnextServices[0]);
-}
-
-function updateActiveButton(clickedBtn) {
-    const allButtons = buttonsContainer.querySelectorAll('button');
-    allButtons.forEach(btn => {
-        btn.className = 'text-left px-6 py-4 rounded-xl font-semibold transition-all duration-300 border-2 bg-white text-blue-600 border-blue-200 hover:border-blue-600 hover:bg-blue-50';
-    });
-    clickedBtn.className = 'text-left px-6 py-4 rounded-xl font-semibold transition-all duration-300 border-2 bg-blue-600 text-white border-blue-600 shadow-md';
-}
-
-// Function to update the right-side panel with smooth animations
-function updateServiceContent(service) {
-    // 1. Trigger fade-out
-    serviceTitle.classList.add('fade-out');
-    serviceDesc.classList.add('fade-out');
-    serviceBg.style.opacity = '0';
-
-    // 2. Wait for fade-out, swap content, then trigger fade-in
+    // Set initial background immediately
+    serviceBg.style.backgroundImage = `url('${services[0].bgImage}')`;
+    serviceTitle.textContent = services[0].title;
+    serviceDesc.textContent = services[0].description;
+    
+    // Position the indicator initially
     setTimeout(() => {
-        serviceTitle.textContent = service.title;
-        serviceDesc.textContent = service.description;
-        serviceBg.style.backgroundImage = `url('${service.bgImage}')`;
+        const firstBtn = buttonsContainer.children[0];
+        gsap.set(activeIndicator, { y: firstBtn.offsetTop, height: firstBtn.offsetHeight });
+    }, 100);
 
-        serviceTitle.classList.remove('fade-out');
-        serviceTitle.classList.add('fade-in');
-        
-        serviceDesc.classList.remove('fade-out');
-        serviceDesc.classList.add('fade-in');
-        
-        // Set opacity to 0.4 so the background image is visible but the blue overlay dominates
-        serviceBg.style.opacity = '0.4'; 
-    }, 200); 
+    initCounters();
 }
 
-// Run the setup when the document is ready
-document.addEventListener('DOMContentLoaded', initializeServiceExplorer);
+function updateUI(clickedBtn, service) {
+    // 1. Move the indicator line smoothly using GSAP
+    gsap.to(activeIndicator, {
+        y: clickedBtn.offsetTop,
+        height: clickedBtn.offsetHeight,
+        duration: 0.5,
+        ease: "power3.out"
+    });
+
+    // 2. Update Button Styles
+    Array.from(buttonsContainer.children).forEach(btn => {
+        btn.className = 'text-left px-6 py-4 rounded-xl transition-all duration-300 font-medium text-lg text-gray-500 hover:text-gray-900 hover:bg-gray-50';
+    });
+    clickedBtn.className = 'text-left px-6 py-4 rounded-xl transition-all duration-300 text-lg text-brand-base bg-brand-light/10 font-semibold';
+
+    // 3. GSAP Animation for Content Swap
+    const tl = gsap.timeline();
+
+    // Fade out text and blur image
+    tl.to([serviceTitle, serviceDesc], { opacity: 0, y: 15, duration: 0.3, stagger: 0.1 })
+      .to(serviceBg, { opacity: 0.5, duration: 0.3 }, "<")
+      .call(() => {
+          // Swap data in the middle of animation
+          serviceTitle.textContent = service.title;
+          serviceDesc.textContent = service.description;
+          serviceBg.style.backgroundImage = `url('${service.bgImage}')`;
+      })
+      // Fade text back in and unblur image
+      .to(serviceBg, { opacity: 1, duration: 0.5 })
+      .to([serviceTitle, serviceDesc], { opacity: 1, y: 0, duration: 0.4, stagger: 0.1, ease: "back.out(1.5)" }, "<");
+}
+
+function initCounters() {
+    const counters = document.querySelectorAll('.counter-val');
+    
+    counters.forEach(counter => {
+        let target = parseInt(counter.getAttribute('data-target'));
+        
+        // GSAP counter animation triggered on scroll
+        gsap.to({ val: 0 }, {
+            val: target,
+            duration: 2.5,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: ".counter-box",
+                start: "top 85%", // Starts when counters are 85% down the viewport
+            },
+            onUpdate: function() {
+                // Update the DOM element with the rounded number
+                counter.innerHTML = Math.floor(this.targets()[0].val);
+            }
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initServices);
 
 
 
