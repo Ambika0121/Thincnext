@@ -6,6 +6,7 @@
     <title>ThincNext | Home</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -81,7 +82,7 @@
         </div>
 
         <div class="workspace-grid">
-            <div class="image-side">
+            <div class="image-side" data-aos="fade-right">
                 <div class="img-wrapper">
                     <img id="main-img" src="https://picsum.photos/id/1/800/500" alt="Preview">
                     <div class="read-more-overlay">read more</div>
@@ -89,15 +90,15 @@
             </div>
 
             <div class="content-side">
-                <div class="feature-item" data-img="https://picsum.photos/id/1/800/500">
+                <div class="feature-item" data-aos="flip-up" data-img="https://picsum.photos/id/1/800/500">
                     <h3>DESIGN FOR STARTUPS</h3>
-                    <div class="feature-details">
+                    <div class="feature-details" >
                         <p>We're all about creating long-term relationships. We host and maintain our own solutions & offer on-going analysis.</p>
                         <a href="#" class="blue-link">read more</a>
                     </div>
                 </div>
 
-                <div class="feature-item" data-img="https://picsum.photos/id/2/800/500">
+                <div class="feature-item" data-aos="fade-up"  data-aos-duration="3000" data-img="https://picsum.photos/id/2/800/500">
                     <h3>WEB TECHNOLOGY</h3>
                     <div class="feature-details">
                         <p>We develop scalable websites & applications that work. We have the skills to turn ideas into reality.</p>
@@ -105,7 +106,7 @@
                     </div>
                 </div>
 
-                <div class="feature-item" data-img="https://picsum.photos/id/3/800/500">
+                <div class="feature-item" data-aos="fade-up" data-aos-duration="3000"data-img="https://picsum.photos/id/3/800/500">
                     <h3>APPS DEVELOPMENT</h3>
                     <div class="feature-details">
                         <p>Our discovery is designed to get under the hood of your brand & empathise with your audience.</p>
@@ -113,7 +114,7 @@
                     </div>
                 </div>
 
-                <div class="feature-item" data-img="https://picsum.photos/id/4/800/500">
+                <div class="feature-item"data-aos="fade-up" data-aos-duration="3000" data-img="https://picsum.photos/id/4/800/500">
                     <h3>CYBER SECURITY</h3>
                     <div class="feature-details">
                         <p>Digital world has various types of vulnerabilities. We provide top-tier security for your data.</p>
@@ -208,6 +209,10 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
 
     <script>
       lucide.createIcons();
