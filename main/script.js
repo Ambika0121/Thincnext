@@ -19,3 +19,4 @@ window.addEventListener("load", () => {
         textTrack.addEventListener("mouseleave", () => loop.play());
     }
 });
+
